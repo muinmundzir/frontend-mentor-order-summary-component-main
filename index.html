@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Order summary card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          '2xl': '1440px'
+        },
+        extend: {
+          colors: {
+            'pale-blue': 'hsl(225, 100%, 94%)',
+            'bright-blue': 'hsl(245, 75%, 52%)',
+            'very-pale-blue': 'hsl(225, 100%, 98%)',
+            'desaturated-blue': 'hsl(224, 23%, 55%)',
+            'dark-blue': 'hsl(223, 47%, 23%)',
+          },
+          backgroundImage: {
+            'mobile': "url('/images/pattern-background-mobile.svg')",
+            'desktop': "url('/images/pattern-background-desktop.svg')",
+          }
+        }
+      }
+    }  
+  </script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <!-- Tailwind styles -->
+  <style type="text/tailwindcss">
+    @layer base  {
+      body {
+        font-family: 'Red Hat Display', sans-serif;
+      }
+    }
+  </style>
+</head>
+<body class="h-screen bg-no-repeat bg-mobile 2xl:bg-desktop flex flex-col items-center justify-center">
+  <div class="mb-12 bg-white w-[330px] 2xl:w-[400px] flex flex-col items-center rounded-2xl shadow-lg overflow-hidden">
+    <div class="w-full">
+      <img class="object-cover" src="./images/illustration-hero.svg" alt="">
+    </div>
+    <section class="w-full py-6 mx-4 px-4 2xl:px-8">
+      <article>
+        <h1 class="my-4 text-2xl text-dark-blue text-center font-bold">
+          Order Summary
+        </h1>
+        <p class="text-center tracking-wider text-desaturated-blue">You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!</p>
+      </article>
+        
+      <div class="w-full mt-6 bg-gray-100 flex items-center justify-between rounded-xl py-4 px-4">
+        <img src="./images/icon-music.svg" alt="">
+        <div class="-ml-10 2xl:-ml-20 flex flex-col">
+          <p class="text-dark-blue font-semibold">Annual Plan</p>
+          <span class="mt-1 text-desaturated-blue">$59.99/year</span>
+        </div>
+        <a class="text-violet-700/80 hover:text-violet-700/60 active:text-violet-700/60 transition text-sm font-semibold underline" href="#">
+          Change
+        </a>
+      </div>
+        
+      <button class="w-full mt-6 mb-3 bg-bright-blue hover:bg-bright-blue/60 active:bg-bright-blue/60 transition py-3 text-white font-semibold rounded-lg shadow-2xl shadow-bg-bright-blue/50">
+        Proceed to Payment
+      </button>
+      <button class="w-full py-3 text-desaturated-blue hover:text-dark-blue active:text-dark-blue transition font-semibold rounded-lg">
+        Cancel Order
+      </button>
+    </section>
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">M. Mu'in Mundzir</a>.
+  </div>
+</body>
+</html>
